@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensaje Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #0b0252;
+            color: #333;
+        }
+        .message-box {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #00a149;
+        }
+        p {
+            font-size: 18px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #050046;
+            background-color: #02a0af;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #16005a8c;
+        }
+        #final-confirmation {
+            display: none;
+        }
+        #message-content {
+            display: none;
+        }
+    </style>
+    <script>
+        function showFinalConfirmation() {
+            document.getElementById('confirmation-box').style.display = 'none';
+            document.getElementById('final-confirmation').style.display = 'block';
+        }
+
+        function showMessage() {
+            document.getElementById('final-confirmation').style.display = 'none';
+            document.getElementById('message-content').style.display = 'block';
+        }
+
+        window.onload = function() {
+            document.getElementById('confirmation-box').style.display = 'block';
+        };
+    </script>
+</head>
+<body>
+    <div id="confirmation-box" class="message-box">
+        <h1>¿Eres Juan Jafred J. M.? </h1>
+        <button onclick="showFinalConfirmation()">Sí, soy yo</button>
+    </div>
+
+    <div id="final-confirmation" class="message-box">
+        <h1>¿Estás seguro?</h1>
+        <button onclick="showMessage()">Sí, estoy seguro</button>
+    </div>
+
+    <div id="message-content" class="message-box">
+        <h1>¡Mucho éxito!</h1>
+        <h2>Juan Jafred J. M.</h2>
+        <h3>Te deseo una excelente carrera en el Split Adidas 30K</h3>
+        <h4>El próximo domingo 28 de julio de 2024.</h4>
+        <p>¡Estoy muy orgullosa de ti!</p>
+        <img src="image.png" alt="Juan Jafred J. M.">
+    </div>
+</body>
+</html>
